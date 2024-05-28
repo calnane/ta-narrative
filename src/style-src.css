@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#glitch-svg {
+  #glitch-green {
+    animation: glitch 3.5s infinite;
+    transform-origin: 100% 100%;
+  }
+  
+  #glitch-red {
+    animation: glitch 3s infinite;
+  }
+
+  &:hover {
+    #glitch-green {
+      animation: glitch 600ms infinite;
+      transform-origin: 100% 100%;
+    }
+    
+    #glitch-red {
+      animation: glitch 500ms infinite;
+    }
+  }
+}
+
+
+
+@keyframes glitch {
+  3% {
+    transform: scale(1.01, 1.005);
+  }
+
+  0%, 8%, 100% {
+    transform: none;
+  }
+}
